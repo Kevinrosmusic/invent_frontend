@@ -1,0 +1,30 @@
+<div class="info-center">
+  <div>
+    <h1>Welcome to shipment system</h1>
+  </div>
+  <div class="mt-1 text-center">
+    <img src="../../../../../assets/logo.png" alt="" width="30%" />
+  </div>
+  <div class="mt-3">
+    <h1>What do you want to do?</h1>
+  </div>
+
+  <div class="button-row mt-3">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="openDialog('0ms', '0ms')"
+    >
+      Make a shipment
+    </button>
+
+    <a
+      mat-raised-button
+      color="primary"
+      class="btn"
+      routerLink="/dashboard/shipments"
+    >
+      Check shipping
+    </a>
+  </div>
+</div>

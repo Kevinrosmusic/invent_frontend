@@ -1,0 +1,29 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <div style="display: flex; flex-direction: column">
+      <div style="display: flex; justify-content: center">
+        <img src="./assets/logo.png" alt="" width="50%" />
+      </div>
+      <div style="margin-top: 50px">
+        <mat-list role="list">
+          <mat-list-item role="listitem">
+            <a routerLink="/dashboard/users">Home</a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a routerLink="/dashboard/shipments">Shipments</a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a routerLink="/dashboard/companies">Transportation Companies</a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a routerLink="/dashboard/users">Admin/Workers</a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a href="" (click)="onLogout()">Logout</a>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content><router-outlet></router-outlet></mat-drawer-content>
+</mat-drawer-container>

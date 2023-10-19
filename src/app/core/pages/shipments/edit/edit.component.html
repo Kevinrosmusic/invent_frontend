@@ -1,0 +1,59 @@
+<div>
+  <h1>Edit shipment</h1>
+  <p>Enter the shipping information</p>
+  <form [formGroup]="shipForm" (ngSubmit)="sendShipmentData()">
+    <div class="form-content">
+      <mat-form-field>
+        <mat-label>Addressee</mat-label>
+        <input matInput id="addressee" formControlName="addressee" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Sender</mat-label>
+        <input matInput id="sender" formControlName="sender" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <textarea matInput id="address" formControlName="address"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Postal code</mat-label>
+        <input matInput type="text" id="zipcode" formControlName="zipcode" (input)="changeZipCode()" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Assigned shipping company</mat-label>
+        <input matInput id="company" formControlName="company" type="text" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Weight(kg)</mat-label>
+        <input matInput id="weight" formControlName="weight" type="number"  (input)="changePrice()" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Package type</mat-label>
+        <input matInput id="package" formControlName="package" type="text" />
+      </mat-form-field>
+      <mat-form-field floatLabel="always">
+        <mat-label>Price</mat-label>
+        <input
+          matInput
+          type="number"
+          class="example-right-align"
+          placeholder="0"
+          id="price"
+          formControlName="price"
+        />
+        <span matTextPrefix>$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+
+      <button
+      mat-raised-button
+      mat-dialog-close
+      color="primary"
+      type="submit"
+      [disabled]="shipForm.invalid"
+    >
+      Edit
+    </button>
+    </div>
+  </form>
+</div>

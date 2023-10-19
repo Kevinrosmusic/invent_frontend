@@ -1,0 +1,27 @@
+<mat-grid-list cols="2" rowHeight="100vh">
+  <mat-grid-tile class="image-login"> </mat-grid-tile>
+  <mat-grid-tile>
+    <form [formGroup]="form" (ngSubmit)="setLogin()">
+      <div class="form-content">
+        <img src="./assets/logo.png" alt="" width="30%" />
+        <mat-form-field style="margin-top: 50px; width: 50%">
+          <mat-label>User</mat-label>
+          <input matInput id="username" formControlName="username" />
+        </mat-form-field>
+        <mat-form-field style="margin-top: 10px; width: 50%">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            id="password"
+            formControlName="password"
+            type="password"
+          />
+        </mat-form-field>
+
+        <button mat-button mat-flat-button color="primary" type="submit">
+          Login
+        </button>
+      </div>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>

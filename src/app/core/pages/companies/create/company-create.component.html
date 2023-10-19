@@ -1,0 +1,27 @@
+<div>
+  <h1>Create Company</h1>
+  <p>Insert data</p>
+  <form [formGroup]="createCompanyForm" (ngSubmit)="sendCompanyData()">
+    <div class="form-content">
+      <mat-form-field style="margin-top: 50px; width: 50%">
+        <mat-label>Company Name</mat-label>
+        <input matInput id="name" formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field style="margin-top: 10px; width: 50%">
+        <mat-label>Postal codes</mat-label>
+        <input matInput id="zipcodes" formControlName="zipcodes" />
+      </mat-form-field>
+
+      <button
+      mat-raised-button
+      mat-dialog-close
+      color="primary"
+      type="submit"
+      [disabled]="createCompanyForm.invalid"
+    >
+      Save
+    </button>
+    </div>
+  </form>
+</div>
